@@ -43,16 +43,23 @@
         <div class="name">
           <h2> Lian Chan </h2>
         </div>
+  
       </header>
       <body>
 
       <!-- Page-specific (main) content here -->
       <main class="container">
-        <p>What are you humming about?diahoifhsoiefhioesfjoajfowijaojao</p>
-
-        <h1>awodjaooawiojdaoijwoiajdoiwajodijwaw jeoaijw ojwio jwioaj o </h1>
-        
-        
+        <section class="new-tweet">
+          <h2>Compose Tweet</h2>
+          <form action="../../tweeter/server/routes/tweets.js" method="POST">
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
+            <div>
+              <button type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
       </main>
 
 
