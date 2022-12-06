@@ -1,7 +1,6 @@
 nav {
   display: flex;
   justify-content: space-between;
-  border: outset #f33;
   height: 120px;
   padding: 1.5em;
   background-color: #4056A1;
@@ -14,16 +13,18 @@ span {
   justify-content: space-between;
   font-family: 'Bungee', sans-serif;
   font-size: 1.5em;
-  border: solid rgb(75, 51, 255);
+
 } 
 
 .navNewTweet {
   display: inline;
+position: relative;
+top: 15px;
 
-  border: solid rgb(19, 112, 48);
 }
 .icon {
   display:flex;
   flex-direction: column;
   align-items: center;
+  color: #f33;
 }
