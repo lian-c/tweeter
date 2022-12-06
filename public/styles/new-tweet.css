@@ -1,12 +1,24 @@
-#tweet-text{
+
+textarea{
   background: none;
   border: 0px;
-  border-bottom: 5px;
+  border-bottom: 3px solid black;
+  width: 650px;
+  text-align: center;
+
+}
+label{
+  display: flex;
+}
+.new-tweet{
+  display:flex;
+  flex-direction: column;
+
 }
 
 .bottom-items {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   font-family: 'Bungee', sans-serif;
 }
 

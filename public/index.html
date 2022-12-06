@@ -24,6 +24,7 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+ 
   </head>
 
   <!-- Top nav bar (fixed) -->
@@ -52,13 +53,17 @@
       <main class="container">
         <section class="new-tweet">
           <h2>Compose Tweet</h2>
-          <form method="POST" action="../../tweeter/server/routes/tweets.js">
+
+            <form method="POST" action="../../tweeter/server/routes/tweets.js">
+
             <label for="tweet-text">What are you humming about?</label>
-            <textarea name="text" id="tweet-text"></textarea>
-            <div class="bottom-items">
-              <button class="tweet-button" type="submit">Tweet</button>
-              <output name="counter" class="counter" for="tweet-text">140</output>
-            </div>
+              <textarea name="text" id="tweet-text"></textarea>
+
+              <div class="bottom-items">
+                <button class="tweet-button" type="submit">Tweet</button>
+                <output name="counter" class="counter" for="tweet-text">140</output>
+              </div>
+
           </form>
         </section>
       </main>
