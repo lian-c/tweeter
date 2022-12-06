@@ -1,0 +1,18 @@
+nav {
+  height: 120px;
+  padding: 1.5em;
+  background-color: #4056A1;
+  color: #FFFFFF
+
+}
+
+span {
+  font-family: 'Bungee', sans-serif;
+  font-size: 1.5em;
+}
+
+.navNewTweet{
+display: flex;
+justify-content: flex-end;
+
+}
