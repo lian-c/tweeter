@@ -1,0 +1,14 @@
+header{
+  height:400px;
+  padding-top: 120px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: wrap column;
+}
+
+h2 {
+  color: #FFFFFF;
+  background-color: #7ca140;
+ 
+}

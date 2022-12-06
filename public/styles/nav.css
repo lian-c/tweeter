@@ -2,10 +2,11 @@ nav {
   display: flex;
   justify-content: space-between;
   height: 120px;
+  width:100%;
   padding: 1.5em;
   background-color: #4056A1;
-  color: #FFFFFF
-
+  color: #FFFFFF;
+  position: fixed;
 }
 
 span {
@@ -28,3 +29,4 @@ top: 15px;
   align-items: center;
   color: #f33;
 }
+
