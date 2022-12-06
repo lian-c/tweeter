@@ -7,6 +7,7 @@ header{
   flex-direction:  column;
   background-color: #3693d1;
   background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
+  width: 100%;
 }
 
 
