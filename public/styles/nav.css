@@ -1,4 +1,7 @@
 nav {
+  display: flex;
+  justify-content: space-between;
+
   height: 120px;
   padding: 1.5em;
   background-color: #4056A1;
@@ -7,12 +10,17 @@ nav {
 }
 
 span {
+  display: flex;
+  justify-content: space-between;
   font-family: 'Bungee', sans-serif;
   font-size: 1.5em;
-}
+} 
 
 .navNewTweet{
-display: flex;
-justify-content: flex-end;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+
 
 }
