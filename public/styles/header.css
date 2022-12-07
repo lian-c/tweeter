@@ -11,6 +11,9 @@
   
 }
 
+h2{
+  font-weight: normal;
+}
 
 .name {
   display: flex;
