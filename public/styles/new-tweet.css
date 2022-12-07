@@ -24,9 +24,10 @@ label{
 }
 
 .tweet-button {
-
   background-color:  #4056A1;
   color: white;
+}
 
-  
+.overlimit{
+  color:red;
 }
