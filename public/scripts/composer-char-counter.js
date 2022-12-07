@@ -1,5 +1,11 @@
 $(document).ready(function() {
-  console.log("document is ready")
-  
-});
 
+  $('textarea').on('input', function(event) {
+   
+    console.log(this.value.length)
+
+
+  });
+
+
+});

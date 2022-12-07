@@ -4,7 +4,8 @@ textarea{
   border: 0px;
   border-bottom: 3px solid black;
   width: 650px;
-  text-align: center;
+  resize: none;
+
 
 }
 label{
