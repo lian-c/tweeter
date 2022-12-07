@@ -3,8 +3,9 @@ textarea{
   background: none;
   border: 0px;
   border-bottom: 3px solid black;
-  width: 650px;
+  width: 100%;
   resize: none;
+
 }
 label{
   display: flex;
@@ -12,11 +13,13 @@ label{
 .new-tweet{
   display:flex;
   flex-direction: column;
+  width: 90%;
 
 }
 
 .bottom-items {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   font-family: 'Bungee', sans-serif;
 }
@@ -30,8 +33,6 @@ label{
   color:red;
 }
 
-article {
-border: solid black 2px;
-width: 90%;
-margin: 50px
+.tweet-title {
+  align-self: center;
 }
