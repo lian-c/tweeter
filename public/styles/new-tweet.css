@@ -5,8 +5,6 @@ textarea{
   border-bottom: 3px solid black;
   width: 650px;
   resize: none;
-
-
 }
 label{
   display: flex;
@@ -30,4 +28,10 @@ label{
 
 .overlimit{
   color:red;
+}
+
+article {
+border: solid black 2px;
+
+margin: 50px
 }
