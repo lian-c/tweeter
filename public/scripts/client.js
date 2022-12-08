@@ -24,14 +24,26 @@ $(() => {
     },
     {
       "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
+        "name": "Michael Scott",
+        "avatars": "https://i.imgur.com/ShrnNhm.jpeg",
+        "handle": "@prisonmike" },
       "content": {
-        "text": "Je pense , donc je suis"
+        "text": "I AM HERE TO SCARE YOU STRAIGHT"
       },
       "created_at": 1461113959088
-    }
+    },
+    {
+      "user": {
+      "name": "Retsuko",
+      "avatars": "https://i.imgur.com/63pt6Hi.jpeg"
+      ,
+      "handle": "@deathmetalsanrio"
+    },
+    "content": {
+      "text": "Underneath the smile, I’m metal till I die!"
+    },
+    "created_at": "10 days ago"
+  }
   ]
 
 
