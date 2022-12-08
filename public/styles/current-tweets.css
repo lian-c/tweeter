@@ -51,3 +51,7 @@ header .username {
 color: rgb(203, 54, 99);
 margin: 2px; 
 }
+
+.tweet-text {
+  word-wrap: break-word;
+}

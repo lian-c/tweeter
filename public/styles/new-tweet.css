@@ -5,6 +5,7 @@ textarea{
   border-bottom: 3px solid black;
   width: 100%;
   resize: none;
+  
 
 }
 label{
@@ -36,3 +37,4 @@ label{
 .tweet-title {
   align-self: center;
 }
+

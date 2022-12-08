@@ -59,23 +59,27 @@ const renderTweets = function(tweets) {
 const createTweetElement = function(tweetObject){
   const $tweetHTML = $(`
   <article>
-        <header>
-          <div class="leftside-header">
+    <header>
+        <div class="leftside-header">
             <img class="user-icon" src="${tweetObject.user.avatars}">
-            <div class="tweet-name">${tweetObject.user.name}</div>
-          </div>
-          <div class="username">${tweetObject.user.handle}</div>
-        </header>
-        <p class="tweet-text">${tweetObject.content.text}</p>
-        <footer>
-          <p class="date">${tweetObject.created_at}</p>
-          <div class="tweet-icon">
-            <i class="fa-solid fa-flag"></i>
-            <i class="fa-solid fa-retweet"></i>
-            <i class="fa-solid fa-heart"></i>
+            <div class="tweet-name">
+            ${tweetObject.user.name}
+            </div>
         </div>
-        </footer>
-      </article>
+          <div class="username">
+          ${tweetObject.user.handle}
+          </div>
+    </header>
+        <p class="tweet-text">${tweetObject.content.text}</p>
+    <footer>
+      <p class="date">${tweetObject.created_at}</p>
+      <div class="tweet-icon">
+         <i class="fa-solid fa-flag"></i>
+         <i class="fa-solid fa-retweet"></i>
+         <i class="fa-solid fa-heart"></i>
+      </div>
+    </footer>
+  </article>
   `);
 return $tweetHTML
 }
@@ -84,7 +88,14 @@ return $tweetHTML
 renderTweets(data)
 
 $('#tweet-text').submit(function(event){
+
   event.preventDefault();
+  const data = $('#tweet-text').serialize();
+
+  $.post('/tweets', data, function(response){
+    console.log(`data ${data} and status `)
+    console.log(response)
+  });
 });
 
 
