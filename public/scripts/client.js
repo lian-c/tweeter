@@ -47,7 +47,7 @@ $(() => {
 
 
 
-// Text that is written in text box is displayed in console.log
+
   $('#tweet-text').submit(function(event) {
     event.preventDefault();
     const data = $(this).serialize();
@@ -58,7 +58,10 @@ $(() => {
  
     $.post('/tweets', data, function(response) {
       // console.log(`data ${data} and response ${response}`);
+      $('textarea').val('');
       loadTweets();
+
+
     });
   });
 
