@@ -8,9 +8,6 @@
 // Test / driver code (temporary). Eventually will get this from the server.
 $(() => {
 
-  // Fake data taken from initial-tweets.json
- 
-
   const renderTweets = function(tweets) {
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
@@ -35,7 +32,7 @@ $(() => {
     </header>
         <p class="tweet-text">${tweetObject.content.text}</p>
     <footer>
-      <p class="date">${tweetObject.created_at}</p>
+      <p class="date">${timeago.format(tweetObject.created_at)}</p>
       <div class="tweet-icon">
          <i class="fa-solid fa-flag"></i>
          <i class="fa-solid fa-retweet"></i>
