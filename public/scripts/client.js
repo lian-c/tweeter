@@ -54,7 +54,8 @@ $(() => {
     event.preventDefault();
     const data = $('#tweet-text').serialize();
     $.post('/tweets', data, function(response) {
-      // console.log(`data ${data} and response ${response}`);
+      console.log(`data ${data} and response ${response}`);
+      loadTweets();
     });
   });
 
