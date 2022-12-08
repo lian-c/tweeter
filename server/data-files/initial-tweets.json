@@ -8,17 +8,28 @@
     "content": {
       "text": "If I have seen further it is by standing on the shoulders of giants"
     },
-    "created_at": 1670295843740
+    "created_at": 1670214315684
   },
   {
     "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
+      "name": "Michael Scott",
+      "avatars": "https://i.imgur.com/ShrnNhm.jpeg",
+      "handle": "@prisonmike"
     },
     "content": {
-      "text": "Je pense , donc je suis"
+      "text": "I AM HERE TO SCARE YOU STRAIGHT"
     },
-    "created_at": 1670382243740
+    "created_at": 1670300715684
+  },
+  {
+    "user": {
+      "name": "Retsuko",
+      "avatars": "https://i.imgur.com/63pt6Hi.jpeg",
+      "handle": "@deathmetalsanrio"
+    },
+    "content": {
+      "text": "Underneath the smile, I’m metal till I die!"
+    },
+    "created_at": 1670387115684
   }
 ]

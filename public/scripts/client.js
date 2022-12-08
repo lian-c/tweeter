@@ -9,55 +9,18 @@
 $(() => {
 
   // Fake data taken from initial-tweets.json
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Michael Scott",
-        "avatars": "https://i.imgur.com/ShrnNhm.jpeg",
-        "handle": "@prisonmike" },
-      "content": {
-        "text": "I AM HERE TO SCARE YOU STRAIGHT"
-      },
-      "created_at": 1461113959088
-    },
-    {
-      "user": {
-      "name": "Retsuko",
-      "avatars": "https://i.imgur.com/63pt6Hi.jpeg"
-      ,
-      "handle": "@deathmetalsanrio"
-    },
-    "content": {
-      "text": "Underneath the smile, I’m metal till I die!"
-    },
-    "created_at": "10 days ago"
-  }
-  ]
+ 
+
+  const renderTweets = function(tweets) {
+    for (const tweet of tweets) {
+      const $tweet = createTweetElement(tweet);
+      $('.current-tweets').prepend($tweet);
+    }
+  };
 
 
-const renderTweets = function(tweets) {
-  for (const tweet of tweets){
-    const $tweet = createTweetElement(tweet);
-    $('.current-tweets').prepend($tweet);
-    console.log($tweet)
-  }
-}
-
-
-const createTweetElement = function(tweetObject){
-  const $tweetHTML = $(`
+  const createTweetElement = function(tweetObject) {
+    const $tweetHTML = $(`
   <article>
     <header>
         <div class="leftside-header">
@@ -81,22 +44,30 @@ const createTweetElement = function(tweetObject){
     </footer>
   </article>
   `);
-return $tweetHTML
-}
+    return $tweetHTML;
+  };
 
 
-renderTweets(data)
-
-$('#tweet-text').submit(function(event){
-
-  event.preventDefault();
-  const data = $('#tweet-text').serialize();
-
-  $.post('/tweets', data, function(response){
-    console.log(`data ${data} and status `)
-    console.log(response)
+  // renderTweets(data);
+// Text that is written in text box is displayed in console.log
+  $('#tweet-text').submit(function(event) {
+    event.preventDefault();
+    const data = $('#tweet-text').serialize();
+    $.post('/tweets', data, function(response) {
+      // console.log(`data ${data} and response ${response}`);
+    });
   });
-});
 
+  const loadTweets = function (){
+    $('.tweet-button').on('click', function(){
+      console.log("button pressed");
+      $.ajax('/tweets', {method: 'GET'}) //.ajax implements the promise interface
+      .then(function(newTweet){
+        renderTweets(newTweet)
+      })
+    });
+  };
+ loadTweets();
+ 
 
 });
