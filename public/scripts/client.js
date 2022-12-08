@@ -59,13 +59,11 @@ $(() => {
   });
 
   const loadTweets = function (){
-    $('.tweet-button').on('click', function(){
-      console.log("button pressed");
       $.ajax('/tweets', {method: 'GET'}) //.ajax implements the promise interface
       .then(function(newTweet){
         renderTweets(newTweet)
       })
-    });
+
   };
  loadTweets();
  
