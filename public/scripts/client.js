@@ -8,6 +8,13 @@
 // Test / driver code (temporary). Eventually will get this from the server.
 $(() => {
 
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+  
+
   const renderTweets = function(tweets) {
     $('.current-tweets').empty(); //empty so it doesn't repeat
     for (const tweet of tweets) {
@@ -31,7 +38,7 @@ $(() => {
           ${tweetObject.user.handle}
           </div>
     </header>
-        <p class="tweet-text">${tweetObject.content.text}</p>
+        <p class="tweet-text">${escape(tweetObject.content.text)}</p>
     <footer>
       <p class="date">${timeago.format(tweetObject.created_at)}</p>
       <div class="tweet-icon">
@@ -51,13 +58,18 @@ $(() => {
   $('#tweet-text').submit(function(event) {
     event.preventDefault();
     const data = $(this).serialize();
+
+    if($('textarea').val() === ""){
+      alert("Please enter a tweet before submitting!")
+      return;
+    }
     if ($('output.counter').hasClass("overlimit")) { //class only exist if over the character limit
       alert("This is over the character limit, please make it a series of tweets or condense it up!");
       return;
     } 
  
     $.post('/tweets', data, function(response) {
-      // console.log(`data ${data} and response ${response}`);
+      console.log(`data ${data} and response ${response}`);
       $('textarea').val('');
       loadTweets();
 
