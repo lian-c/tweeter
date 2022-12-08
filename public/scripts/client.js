@@ -51,16 +51,13 @@ $(() => {
   $('#tweet-text').submit(function(event) {
     event.preventDefault();
     const data = $(this).serialize();
-    const length = $(this).val().trim();
-    console.log(length)
-    console.log(data)
-    if (data.length > 146) { //first 5 letter is text= so technically it's <141 (140 is the limit)
+    if ($('output.counter').hasClass("overlimit")) { //class only exist if over the character limit
       alert("This is over the character limit, please make it a series of tweets or condense it up!");
       return;
     } 
  
     $.post('/tweets', data, function(response) {
-      console.log(`data ${data} and response ${response}`);
+      // console.log(`data ${data} and response ${response}`);
       loadTweets();
     });
   });
