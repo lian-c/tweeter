@@ -60,16 +60,22 @@ $(() => {
     const data = $(this).serialize();
 
     if($('textarea').val() === ""){
-      alert("Please enter a tweet before submitting!")
-      return;
+      $('.error.error-overlimit').hide();  //hide so it won't show both error
+        $('.error.empty').slideDown( "slow" );
+        return;
+      
     }
     if ($('output.counter').hasClass("overlimit")) { //class only exist if over the character limit
-      alert("This is over the character limit, please make it a series of tweets or condense it up!");
-      return;
+      $('.error.empty').hide(); 
+      $('.error.error-overlimit').slideDown( "slow" );
+        return;
+      
     } 
  
     $.post('/tweets', data, function(response) {
       console.log(`data ${data} and response ${response}`);
+      $('.error.empty').hide(); //hide error from view 
+      $('.error.error-overlimit').hide();
       $('textarea').val('');
       loadTweets();
 

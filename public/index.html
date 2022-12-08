@@ -69,7 +69,16 @@
     <section class="new-tweet">
       <h2 class="tweet-title">Compose Tweet</h2>
 
-      
+      <label for="error" class="error error-overlimit">
+        <i class="fa-solid fa-bomb"></i> 
+        Over the character limit, please make it a series of tweets or condense it up! 
+        <i class="fa-solid fa-bomb"></i>
+      </label>
+      <label for="error" class="error empty">
+        <i class="fa-solid fa-bomb"></i> 
+        Please enter a tweet before submitting! 
+        <i class="fa-solid fa-bomb"></i>
+      </label>
       <form id="tweet-text" method="POST" action="/tweets">
 
         <label for="tweet-text">What are you humming about?</label>
