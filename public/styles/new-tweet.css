@@ -38,3 +38,19 @@ label{
   align-self: center;
 }
 
+/* toggle bomb in error message when clicked  */
+.fa-solid.fa-person-dress-burst {
+  display: none;   
+  color:red;
+}
+.toggle .fa-solid.fa-person-dress-burst {
+  display: inline;   
+  color:red;
+}
+.toggle .fa-solid.fa-bomb {
+  display: none;   
+  color:red;
+}
+.fa-solid.fa-bomb{
+  color:black;
+}

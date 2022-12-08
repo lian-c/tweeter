@@ -8,7 +8,7 @@
 // Test / driver code (temporary). Eventually will get this from the server.
 $(() => {
 
-  const escape = function (str) {
+  const escape = function (str) { //prevents scripts being run by client side
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
@@ -55,7 +55,7 @@ $(() => {
 
 
 
-  $('#tweet-text').submit(function(event) {
+  $('#tweet-text').submit(function(event) { 
     event.preventDefault();
     const data = $(this).serialize();
 
@@ -74,7 +74,7 @@ $(() => {
  
     $.post('/tweets', data, function(response) {
       console.log(`data ${data} and response ${response}`);
-      $('.error.empty').hide(); //hide error from view 
+      $('.error.empty').hide(); //hide errors from view 
       $('.error.error-overlimit').hide();
       $('textarea').val('');
       loadTweets();
@@ -83,8 +83,8 @@ $(() => {
     });
   });
 
-  const loadTweets = function (){
-      $.ajax('/tweets', {method: 'GET'}) //.ajax implements the promise interface
+  const loadTweets = function (){ //grabs tweets from /tweets 
+      $.ajax('/tweets', {method: 'GET'}) 
       .then(function(newTweet){
         renderTweets(newTweet)
       })
@@ -92,5 +92,16 @@ $(() => {
   };
  loadTweets();
  
+
+$(function() {
+
+  $("body").on('click', ".error", function() {
+      $(this).toggleClass('toggle');
+      return false;
+  });
+  
+});
+
+
 
 });

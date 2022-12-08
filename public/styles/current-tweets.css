@@ -49,9 +49,21 @@ header .username {
 
 .fa-solid:hover{
 color: rgb(203, 54, 99);
-margin: 2px; 
+margin: 3px; 
 }
 
 .tweet-text {
   word-wrap: break-word;
+}
+
+/* toggle bomb in error message when clicked  */
+.fa-solid.fa-person-dress-burst {
+  display: none;   
+  
+}
+.toggle .fa-solid.fa-person-dress-burst {
+  display: inline;   
+}
+.toggle .fa-solid.fa-bomb {
+  display: none;   
 }

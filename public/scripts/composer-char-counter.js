@@ -13,5 +13,6 @@ $(document).ready(function() {
       $(counter).removeClass("overlimit");
     }
   });
+  
 
 });
