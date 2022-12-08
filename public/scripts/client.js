@@ -82,4 +82,10 @@ return $tweetHTML
 
 
 renderTweets(data)
+
+$('#tweet-text').submit(function(event){
+  event.preventDefault();
+});
+
+
 });
