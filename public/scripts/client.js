@@ -4,27 +4,18 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-
-// Test / driver code (temporary). Eventually will get this from the server.
 $(() => {
 
-  const escape = function (str) { //prevents scripts being run by client side
+  //prevents scripts being run by client side
+  const escape = function (str) { 
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
   
-  const loadTweets = function (){ //grabs tweets from /tweets 
-    $.ajax('/tweets', {method: 'GET'}) 
-    .then(function(newTweet){
-      renderTweets(newTweet)
-    })
-
-};
-loadTweets();
-
+  //Takes a json and creates a tweet 
   const renderTweets = function(tweets) {
-    $('.current-tweets').empty(); //empty so it doesn't repeat
+    $('.current-tweets').empty(); 
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
       $('.current-tweets').prepend($tweet);
@@ -60,9 +51,7 @@ loadTweets();
     return $tweetHTML;
   };
 
-
-
-
+// Submits text to /tweets which 
   $('#tweet-text').submit(function(event) { 
     event.preventDefault();
     const data = $(this).serialize();
@@ -77,15 +66,13 @@ loadTweets();
       $('.error.error-overlimit').slideDown( "slow" );
         return;
     } 
- 
-    $.post('/tweets', data, function(response) {
-      console.log(`data ${data} and response ${response}`);
+    
+    $.post('/tweets', data, function() {
       $('.error.empty').hide(); //hide errors from view 
       $('.error.error-overlimit').hide();
       $('textarea').val(''); //clear input text area after submitting
       $('output.counter').val(140) //make the counter reset to 140 again
       loadTweets();
-
 
     });
   });
@@ -98,9 +85,25 @@ loadTweets();
       $(this).toggleClass('toggle');
       return false;
   });
-  
 });
 
+ // Toggles writing a new tweet when clicking arrow on nav
+ $(function() {
+  $(".icon").on('click', ".fa-angles-down", function() {
+    console.log("clicked")
+      $(".new-tweet").toggleClass('toggle');
+      return false;
+  });
+});
 
+//grabs tweets from /tweets 
+const loadTweets = function (){ 
+  $.ajax('/tweets', {method: 'GET'}) 
+  .then(function(newTweet){
+    renderTweets(newTweet)
+  })
+};
+
+loadTweets();
 
 });

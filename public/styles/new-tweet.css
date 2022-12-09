@@ -1,22 +1,11 @@
-
 textarea{
   background: none;
   border: 0px;
   border-bottom: 3px solid black;
   width: 100%;
   resize: none;
-  
+}
 
-}
-label{
-  display: flex;
-}
-.new-tweet{
-  display:flex;
-  flex-direction: column;
-  width: 90%;
-
-}
 
 .bottom-items {
   display: flex;
@@ -53,4 +42,20 @@ label{
 }
 .fa-solid.fa-bomb{
   color:black;
+}
+
+.toggle .fa-solid.fa-angles-down{
+  display: inline; 
+}
+
+/* toggle new tweet based on nav arrow button */
+.new-tweet{
+  display: none;
+  flex-direction: column;
+  width: 90%;
+  margin-top: 20px;
+}
+
+.toggle.new-tweet{
+  display: flex;
 }

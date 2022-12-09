@@ -12,6 +12,7 @@
 }
 
 .profile {
+
   border-radius: 50%;
   width: 250px;
   height: 250px;
@@ -21,12 +22,11 @@
 
 
 h2{
-  font-weight: normal;
+  /* font-weight: normal; */
+  margin: 0px;
 }
 
 .name {
-  display: flex;
-  justify-content: center;
   color: #FFFFFF;
   font-family: 'Source Sans Pro', sans-serif;
 }
