@@ -35,8 +35,8 @@ Preview of hovering over a tweet and icon with dynamic changes
 Opens input box when pressed and write a tweet turns to close tweet box 
 !["Input box that will generate tweet after"](https://github.com/lian-c/tweeter/blob/master/docs/button-nav.png)
 
-Updating existing URL
-!["Edit links that were already created"](https://github.com/lian-c/tweeter/blob/master/docs/Tweeter-compose-tweet.png)
+Text box shown now
+!["text box"](https://github.com/lian-c/tweeter/blob/master/docs/Tweeter-compose-tweet.png)
 
 Live Counter and still within counter limit
 !["Live counter"](https://github.com/lian-c/tweeter/blob/master/docs/Tweet-length.png)
