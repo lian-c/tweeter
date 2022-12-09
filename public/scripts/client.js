@@ -89,12 +89,13 @@ $(() => {
 
 });
 
- // Toggles writing a new tweet when clicking arrow on nav
+ // Toggles writing a new tweet/close a new tweet, text area hides/shows when clicking arrow on nav
  $(function() {
   $(".icon").on('click', ".fa-angles-down", function() {
-    $(".nav-tweet").toggleClass('toggle');
+    $(".nav-tweet").toggleClass('toggle'); 
     $(".new-tweet").toggleClass('toggle');
-      $(".close-tweet").toggleClass('toggle')
+      $(".close-tweet").toggleClass('toggle');
+      $('.error.empty').hide();
       return false;
   });
 });
