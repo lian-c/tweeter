@@ -105,8 +105,6 @@ $(() => {
 });
 
 
-
-
 //grabs tweets from /tweets 
 const loadTweets = function (){ 
   $.ajax('/tweets', {method: 'GET'}) 
@@ -116,5 +114,6 @@ const loadTweets = function (){
 };
 
 loadTweets();
+
 
 });

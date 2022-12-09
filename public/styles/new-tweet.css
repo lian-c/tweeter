@@ -14,8 +14,14 @@ textarea{
 }
 
 .tweet-button {
-  background-color:  #4056A1;
+  background-color:  rgb(235, 148, 197);
+  border:none;
   color: white;
+}
+
+.tweet-button:hover{
+  margin-top: 2px;
+  box-shadow: 5px 5px 2px rgb(205, 112, 165);
 }
 
 .overlimit{

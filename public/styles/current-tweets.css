@@ -5,7 +5,7 @@ margin: 50px
 }
 
 article:hover{
-  box-shadow: 10px 10px rgb(205, 112, 165);
+  box-shadow: 10px 10px 4px rgb(205, 112, 165);
 }
 
 .user-icon {
