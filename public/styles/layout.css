@@ -41,12 +41,11 @@ body {
 @media only screen and (min-width: 1024px) {
   
   header.top{
-    width:425px;
-    height:450px
+    width:40%;
   }
   
   .container{
-    width:60vw;
+    width:55%;
   }
   
   body{
@@ -55,11 +54,11 @@ body {
   flex-direction: row;
   align-items: flex-start;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 textarea {
-  margin-top:60px;
+  margin-top:50px;
   width:110%
 }
 
