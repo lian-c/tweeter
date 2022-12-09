@@ -1,9 +1,9 @@
  article {
-
-  padding: 20px;
+padding: 20px;
 border: solid black 4px;
 margin: 50px
 }
+
 article:hover{
   box-shadow: 10px 10px rgb(205, 112, 165);
 }
@@ -56,14 +56,3 @@ margin: 3px;
   word-wrap: break-word;
 }
 
-/* toggle bomb in error message when clicked  */
-.fa-solid.fa-person-dress-burst {
-  display: none;   
-  
-}
-.toggle .fa-solid.fa-person-dress-burst {
-  display: inline;   
-}
-.toggle .fa-solid.fa-bomb {
-  display: none;   
-}

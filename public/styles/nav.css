@@ -30,4 +30,7 @@ top: 15px;
   align-items: center;
   color: #f33;
 }
+.fa-solid.fa-angles-down{
+  display: inline; 
+}
 

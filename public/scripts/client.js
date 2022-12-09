@@ -82,19 +82,25 @@ $(() => {
  // Toggles bomb icon in error message when clicking on error message
  $(function() {
   $("body").on('click', ".error", function() {
-      $(this).toggleClass('toggle');
+    console.log("clicked")
+      $(this).toggleClass('clicked');
       return false;
   });
+
 });
 
  // Toggles writing a new tweet when clicking arrow on nav
  $(function() {
   $(".icon").on('click', ".fa-angles-down", function() {
-    console.log("clicked")
-      $(".new-tweet").toggleClass('toggle');
+    $(".nav-tweet").toggleClass('toggle');
+    $(".new-tweet").toggleClass('toggle');
+      $(".close-tweet").toggleClass('toggle')
       return false;
   });
 });
+
+
+
 
 //grabs tweets from /tweets 
 const loadTweets = function (){ 

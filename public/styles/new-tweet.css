@@ -6,7 +6,6 @@ textarea{
   resize: none;
 }
 
-
 .bottom-items {
   display: flex;
   align-items: center;
@@ -28,34 +27,50 @@ textarea{
 }
 
 /* toggle bomb in error message when clicked  */
+.fa-solid.fa-bomb{
+  display:inline;
+  color: black;
+}
+
 .fa-solid.fa-person-dress-burst {
   display: none;   
-  color:red;
 }
-.toggle .fa-solid.fa-person-dress-burst {
+
+.clicked .fa-solid.fa-person-dress-burst {
   display: inline;   
   color:red;
 }
-.toggle .fa-solid.fa-bomb {
+.clicked .fa-solid.fa-bomb {
   display: none;   
-  color:red;
-}
-.fa-solid.fa-bomb{
-  color:black;
 }
 
-.toggle .fa-solid.fa-angles-down{
-  display: inline; 
+/* Toggles composing a new tweet when clicking on nav arrow */
+.nav-tweet{
+  display: inline;
+position: relative;
 }
 
-/* toggle new tweet based on nav arrow button */
+.nav-tweet.toggle{
+  display: none;
+}
+
 .new-tweet{
   display: none;
+}
+
+.new-tweet.toggle{
+  display: flex;
   flex-direction: column;
   width: 90%;
   margin-top: 20px;
 }
 
-.toggle.new-tweet{
-  display: flex;
+
+.close-tweet.toggle {
+  display: none;
+}
+
+.close-tweet {
+  display: inline;
+position: relative;
 }
