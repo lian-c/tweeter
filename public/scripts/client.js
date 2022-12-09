@@ -7,15 +7,15 @@
 $(() => {
 
   //prevents scripts being run by client side
-  const escape = function (str) { 
+  const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
   
-  //Takes a json and creates a tweet 
+  //Takes a json and creates a tweet
   const renderTweets = function(tweets) {
-    $('.current-tweets').empty(); 
+    $('.current-tweets').empty();
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
       $('.current-tweets').prepend($tweet);
@@ -51,27 +51,27 @@ $(() => {
     return $tweetHTML;
   };
 
-// Submits text to /tweets which 
-  $('#tweet-text').submit(function(event) { 
+  // Submits text to /tweets which
+  $('#tweet-text').submit(function(event) {
     event.preventDefault();
     const data = $(this).serialize();
 
-    if($('textarea').val() === ""){
+    if ($('textarea').val() === "") {
       $('.error.error-overlimit').hide();  //hide so it won't show both error
-        $('.error.empty').slideDown( "slow" );
-        return;
+      $('.error.empty').slideDown("slow");
+      return;
     }
     if ($('output.counter').hasClass("overlimit")) { //class only exist if over the character limit
-      $('.error.empty').hide(); 
-      $('.error.error-overlimit').slideDown( "slow" );
-        return;
-    } 
+      $('.error.empty').hide();
+      $('.error.error-overlimit').slideDown("slow");
+      return;
+    }
     
     $.post('/tweets', data, function() {
-      $('.error.empty').hide(); //hide errors from view 
+      $('.error.empty').hide(); //hide errors from view
       $('.error.error-overlimit').hide();
       $('textarea').val(''); //clear input text area after submitting
-      $('output.counter').val(140) //make the counter reset to 140 again
+      $('output.counter').val(140); //make the counter reset to 140 again
       loadTweets();
 
     });
@@ -79,41 +79,40 @@ $(() => {
 
 
  
- // Toggles bomb icon in error message when clicking on error message
- $(function() {
-  $("body").on('click', ".error", function() {
-    console.log("clicked")
+  // Toggles bomb icon in error message when clicking on error message
+  $(function() {
+    $("body").on('click', ".error", function() {
+      console.log("clicked");
       $(this).toggleClass('clicked');
       return false;
+    });
+
   });
 
-});
-
- // Toggles writing a new tweet/close a new tweet, text area hides/shows when clicking arrow on nav
- $(function() {
-  $(".icon").on('click', ".fa-angles-down", function() {
-    $(".nav-tweet").toggleClass('toggle'); 
-    $(".close-tweet").toggleClass('toggle'); 
-  if ($(".nav-tweet").hasClass('toggle')){
-    $('.new-tweet').slideDown( "slow" );
-  } 
-  else {
-    $('.new-tweet').slideUp("slow");
-    $('.error.empty').hide();
-    return false;
-  }});
-});
+  // Toggles writing a new tweet/close a new tweet, text area hides/shows when clicking arrow on nav
+  $(function() {
+    $(".icon").on('click', ".fa-angles-down", function() {
+      $(".nav-tweet").toggleClass('toggle');
+      $(".close-tweet").toggleClass('toggle');
+      if ($(".nav-tweet").hasClass('toggle')) {
+        $('.new-tweet').slideDown("slow");
+      } else {
+        $('.new-tweet').slideUp("slow");
+        $('.error.empty').hide();
+        return false;
+      }
+    });
+  });
 
 
-//grabs tweets from /tweets 
-const loadTweets = function (){ 
-  $.ajax('/tweets', {method: 'GET'}) 
-  .then(function(newTweet){
-    renderTweets(newTweet)
-  })
-};
+  //grabs tweets from /tweets
+  const loadTweets = function() {
+    $.ajax('/tweets', {method: 'GET'})
+      .then(function(newTweet) {
+        renderTweets(newTweet);
+      });
+  };
 
-loadTweets();
-
+  loadTweets();
 
 });
