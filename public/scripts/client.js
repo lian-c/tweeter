@@ -93,11 +93,15 @@ $(() => {
  $(function() {
   $(".icon").on('click', ".fa-angles-down", function() {
     $(".nav-tweet").toggleClass('toggle'); 
-    $(".new-tweet").toggleClass('toggle');
-      $(".close-tweet").toggleClass('toggle');
-      $('.error.empty').hide();
-      return false;
-  });
+    $(".close-tweet").toggleClass('toggle'); 
+  if ($(".nav-tweet").hasClass('toggle')){
+    $('.new-tweet').slideDown( "slow" );
+  } 
+  else {
+    $('.new-tweet').slideUp("slow");
+    $('.error.empty').hide();
+    return false;
+  }});
 });
 
 

@@ -54,12 +54,9 @@ position: relative;
   display: none;
 }
 
+
 .new-tweet{
   display: none;
-}
-
-.new-tweet.toggle{
-  display: flex;
   flex-direction: column;
   width: 90%;
   margin-top: 20px;
