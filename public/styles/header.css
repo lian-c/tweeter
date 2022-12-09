@@ -11,6 +11,15 @@
   
 }
 
+.profile {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  object-position: 97% 0;
+}
+
+
 h2{
   font-weight: normal;
 }
