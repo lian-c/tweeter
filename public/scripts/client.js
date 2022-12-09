@@ -14,6 +14,14 @@ $(() => {
     return div.innerHTML;
   };
   
+  const loadTweets = function (){ //grabs tweets from /tweets 
+    $.ajax('/tweets', {method: 'GET'}) 
+    .then(function(newTweet){
+      renderTweets(newTweet)
+    })
+
+};
+loadTweets();
 
   const renderTweets = function(tweets) {
     $('.current-tweets').empty(); //empty so it doesn't repeat
@@ -63,38 +71,29 @@ $(() => {
       $('.error.error-overlimit').hide();  //hide so it won't show both error
         $('.error.empty').slideDown( "slow" );
         return;
-      
     }
     if ($('output.counter').hasClass("overlimit")) { //class only exist if over the character limit
       $('.error.empty').hide(); 
       $('.error.error-overlimit').slideDown( "slow" );
         return;
-      
     } 
  
     $.post('/tweets', data, function(response) {
       console.log(`data ${data} and response ${response}`);
       $('.error.empty').hide(); //hide errors from view 
       $('.error.error-overlimit').hide();
-      $('textarea').val('');
+      $('textarea').val(''); //clear input text area after submitting
+      $('output.counter').val(140) //make the counter reset to 140 again
       loadTweets();
 
 
     });
   });
 
-  const loadTweets = function (){ //grabs tweets from /tweets 
-      $.ajax('/tweets', {method: 'GET'}) 
-      .then(function(newTweet){
-        renderTweets(newTweet)
-      })
 
-  };
- loadTweets();
  
-
-$(function() {
-
+ // Toggles bomb icon in error message when clicking on error message
+ $(function() {
   $("body").on('click', ".error", function() {
       $(this).toggleClass('toggle');
       return false;

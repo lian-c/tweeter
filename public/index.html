@@ -67,7 +67,7 @@
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
-      <h2 class="tweet-title">Compose Tweet</h2>
+      <!-- <h2 class="tweet-title">Compose Tweet</h2>   was part of starter code but not shown in final product examples-->
 
       <label for="error" class="error error-overlimit">
         <i class="fa-solid fa-bomb"></i>
@@ -76,6 +76,7 @@
         <i class="fa-solid fa-person-dress-burst"></i>
         <i class="fa-solid fa-bomb"></i>
       </label>
+
       <label for="error" class="error empty">
         <i class="fa-solid fa-bomb"></i> 
         <i class="fa-solid fa-person-dress-burst"></i>
@@ -83,8 +84,8 @@
         <i class="fa-solid fa-person-dress-burst"></i>
         <i class="fa-solid fa-bomb"></i>
       </label>
-      <form id="tweet-text" method="POST" action="/tweets">
 
+      <form id="tweet-text" method="POST" action="/tweets">
         <label for="tweet-text">What are you humming about?</label>
         <textarea name="text" id="tweet-text"></textarea>
         <div class="bottom-items">
