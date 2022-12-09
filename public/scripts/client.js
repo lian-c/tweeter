@@ -26,7 +26,7 @@ $(() => {
   const createTweetElement = function(tweetObject) {
     const $tweetHTML = $(`
   <article>
-    <header>
+    <header class="tweet-header">
         <div class="leftside-header">
             <img class="user-icon" src="${tweetObject.user.avatars}">
             <div class="tweet-name">

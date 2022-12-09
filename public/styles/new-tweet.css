@@ -4,6 +4,7 @@ textarea{
   border-bottom: 3px solid black;
   width: 100%;
   resize: none;
+  margin-top: 20px;
 }
 
 .bottom-items {
@@ -36,6 +37,7 @@ textarea{
 .fa-solid.fa-bomb{
   display:inline;
   color: black;
+  margin: 0px;
 }
 
 .fa-solid.fa-person-dress-burst {
@@ -61,7 +63,7 @@ position: relative;
 }
 
 
-.new-tweet{
+.new-tweet{ 
   display: none;
   flex-direction: column;
   width: 90%;

@@ -5,14 +5,15 @@
   align-items: center;
   justify-content: center;
   flex-direction:  column;
-  background-color: #3693d1;
+  background-color:  #BA94D1;
   background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
+  box-shadow: 3px 3px 3px #7F669D;
   width: 100%;
   
 }
 
+/*profile picture to be round and centered*/
 .profile {
-
   border-radius: 50%;
   width: 250px;
   height: 250px;
@@ -27,7 +28,8 @@ h2{
 
 .name {
   color: #FFFFFF;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'La Belle Aurore', cursive;
+  font-size: 40px;
 }
 
 .error {
