@@ -41,10 +41,9 @@
 <!-- Top nav bar (fixed) -->
 <nav>
   <span class="tweetTitle"> tweeter </span>
-
   <div class="navNewTweet">
     <div class="nav-tweet"><strong>Write</strong> a new tweet</div>
-    <div class="close-tweet toggle"><strong>Close</strong> a new tweet</div>
+    <div class="close-tweet toggle"><strong>Close</strong> tweet box</div>
     <div class="icon"><i class="fa-solid fa-angles-down"></i></div>
   </div>
 </nav>
@@ -90,6 +89,7 @@
       
       <!-- Form for new tweets to be posted -->
       <form id="tweet-text" method="POST" action="/tweets">
+        <h2>Compose a tweet</h2>
         <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
         <div class="bottom-items">
           <button class="tweet-button" type="submit">Tweet</button>
