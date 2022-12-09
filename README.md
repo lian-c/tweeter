@@ -60,4 +60,4 @@ Desktop view 1024px minimum
 !["desktop view"](https://github.com/lian-c/tweeter/blob/master/docs/desktop-view.png)
 
 Error message if you try to submit an empty tweet
-!["no text error"](hhttps://github.com/lian-c/tweeter/blob/master/docs/empty-tweeterror.png)
+!["no text error"](https://github.com/lian-c/tweeter/blob/master/docs/empty-tweeterror.png)
