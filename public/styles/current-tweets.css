@@ -1,7 +1,7 @@
- article {
+article {
 padding: 20px;
 border: solid black 4px;
-margin: 50px
+margin: 50px;
 }
 
 article:hover{
@@ -34,7 +34,7 @@ header.tweet-header{
 }
 
 .tweet-header div.username {
-  color: rgb(58, 138, 148) ;
+  color: rgb(58, 138, 148);
  
 }
 
