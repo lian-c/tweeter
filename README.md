@@ -44,10 +44,10 @@ Live Counter and still within counter limit
 Uh oh! Over counter limit
 !["Over counter limit"](https://github.com/lian-c/tweeter/blob/master/docs/overcharlimit.png)
 
-If you try to be a rebel and submit anyways you will face an error code
+If you try to submit there will be an error message
 !["Error message when trying to submit"](https://github.com/lian-c/tweeter/blob/master/docs/error-message.png)
 
-If you click on the error message there will an exploding person because why not haha
+If you click on the error message there will an exploding person
 !["exploded person"](https://github.com/lian-c/tweeter/blob/master/docs/error-explode.png)
 
 Successful tweet that is within the character limit
